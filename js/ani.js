@@ -25,55 +25,59 @@ function init() {
 
 
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x1c1d26);
-  
-  camera = new THREE.PerspectiveCamera(2,width/height,1,5000);
-  //camera.rotation.y = 150;
+  // scene.background = new THREE.Color(0x1c1d26);
 
-  camera.position.x = 50;
-  camera.position.y = 40;
-  camera.position.z = -40;
- //camera.updateProjectionMatrix();
+const loaderbg = new THREE.TextureLoader();
+loaderbg.load('images/The_Moon_pillars.jpg', function(texture)
+            {
+             scene.background = texture;  
+            });
+
+  //0x1c1d26
+  camera = new THREE.PerspectiveCamera(1,width/height,1,5000);
+
+ camera.position.set(210, 200, 210);
 
 
 
 
+camera.updateProjectionMatrix();
   //controls = new THREE.OrbitControls(camera);
   //controls.addEventListener('change', renderer);
 
-  hlight = new THREE.AmbientLight (0x404040,3);
+  hlight = new THREE.AmbientLight (0x404040,2);
   scene.add(hlight);
+
+  directionalLight = new THREE.DirectionalLight( 0xffffff, 4 );
+  scene.add( directionalLight );
+
+
+
+
   const pointLight =  new THREE.PointLight( 0xffffff, 2, 1000 );
-  // pointLight.position.set( 10, 25, - 40 );
-   scene.add( pointLight );
-
-  // const pointLight =  new THREE.PointLight( 0xffffff, 1, 1000 );
-  // pointLight.position.set( 30, 20, - 40 );
-  // scene.add( pointLight );
-
-  // const pointLight =  new THREE.PointLight( 0xffffff, 1, 1000 );
-  // pointLight.position.set( 110, -20, - 40 );
-  // scene.add( pointLight );
+  pointLight.position.set( 0, 1, 6 );
+  scene.add( pointLight );
 
 
-  const pointLight2 =  new THREE.PointLight( 0xffffff, 2, 1000 );
-  pointLight2.position.set( 0, 0, 0 );
-  scene.add( pointLight2 );
+  // const pointLight2 =  new THREE.PointLight( 0xffffff, 2, 1000 );
+  // pointLight2.position.set( 1, 6, 0 );
+  // scene.add( pointLight2 );
 
 
   const pointLight3 =  new THREE.PointLight( 0xffffff, 2, 1000 );
-  pointLight3.position.set( -50,-50,-50 );
+  pointLight3.position.set(-5,0,0 );
   scene.add( pointLight3 );
 
 
-  const pointLight4 =  new THREE.PointLight( 0xffffff,2, 1000 );
-  pointLight4.position.set( 50, 50, -20 );
+  const pointLight4 =  new THREE.PointLight( 0xffffff,2, 1000 ,2);
+  pointLight4.position.set( 0, -5, 0);
   scene.add( pointLight4 );
 
-  const pointLight5 =  new THREE.PointLight( 0xffffff,2, 1000 );
-  pointLight5.position.set( 20, -20, 20 );
-  // pointLight5.position.set(-40, 10, 20 );
-  scene.add( pointLight5 );
+  // const pointLight5 =  new THREE.PointLight( 0xffffff,2, 1000 );
+  // pointLight5.position.set( 20, -20, 20 );
+  // scene.add( pointLight5 );
+
+  
   //var drawingSurface = document.getElementById( 'canvas' );
 //	var renderer = new THREE.WebGLRenderer( { antialias: true, canvas: drawingSurface } );
 
@@ -97,15 +101,17 @@ function init() {
 
   let loader = new THREE.GLTFLoader();
   loader.load('model/Moonrovernew.glb', function(gltf){
-    console.log(gltf);
+    
    // console.log(gltf.scene.children[0]);
     
     rover = gltf.scene;
-    rover.scale.set(1,1,1);
+    rover.scale.set(2,2,2);
     scene.add(gltf.scene);
 
-    //console.log(gltf  );
     
+    rover.position.set(69,6,102);
+ 
+
 
     mixer = new THREE.AnimationMixer( gltf.scene);
   
@@ -135,6 +141,7 @@ function animate() {
 
   
   requestAnimationFrame(animate);
+  // controls.update();
   if (mixer) mixer.update (clock.getDelta ());  
   renderer.render(scene,camera);
  
@@ -151,9 +158,7 @@ function animate() {
     var height =getHeigth(container);
     var width =container.clientWidth;
     //console.log(container.style.maxHeight);
-    camera.position.x = 50;
-    camera.position.y = 40;
-    camera.position.z = -40;
+    camera.position.set(150, 150, 170);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);

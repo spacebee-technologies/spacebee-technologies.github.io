@@ -26,10 +26,10 @@
 							<a href="#">Resources</a>
 							<ul>
 								<!-- <li><a href="left-sidebar.html">Rover design</a></li>
-								<li><a href="right-sidebar.html">Geological dataset</a></li>
+								<li><a href="right-sidebar.html">Measurement dataset</a></li>
 								<li><a href="no-sidebar.html">Moon image dataset</a></li> -->
 								<li><a href="rover.html">Rover design</a></li>
-								<li><a href="geologia.html">Geological dataset</a></li>
+								<li><a href="measurement.html">Measurement dataset</a></li>
 								<li><a href="ImageDataset.html">Moon image dataset</a></li>
 								<!-- <li>
 									<a href="#">Submenu</a>
@@ -42,7 +42,7 @@
 								</li> -->
 							</ul>
 						</li>
-						<li><a href="blog.html">Blog</a></li>
+						<li><a href="https://www.instagram.com/spacebeetech/" target="_blank">Blog</a></li>
 						<!-- <li><a href="elements.html">Blog</a></li> -->
 					</ul>
 				</nav>
@@ -70,13 +70,12 @@
 							<div class="row">
 								<div class="col-4 col-12-medium">
 									<header>
-										<h2>Access open source repository</h2>
+										<h2>Rover Tito</h2>
 									</header>
 								</div>
 								<div class="col-6 col-12-medium">
-                                    
-                            
-                                    <p>All the desing information is available in an open repository. 
+                                
+                                    <p><b>Access open source repository</b> <br> All the desing information is available in an open repository. 
                                     </p>
 									<p class="centrado">   <span>   <a class="github-button" href="https://github.com/SpaceBeeTech" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" aria-label="Follow @Spacebee Technologies on GitHub">Follow @Spacebee Technologies</a></span></p>
                                  
@@ -105,29 +104,36 @@
 								</div>
 								<div class="col-4 col-12-medium">
 									<ul class="textoJustificado">
-										<li>Characterize the Moon’s regolith, through the analysis of seismological
-											 data and infrared spectrometry.
+										<li>Find subterranean water through the study of the soil
+											 geo resistivity with the method Vertical Electrical Sounding.
 										</li>
+
+										<li>Detect and characterize lava tubes (hollow structures suitable for human shelter) 
+											through the study of subterranean structure with the method Ground-Penetrating Radar.
+									   </li>
+
 
 										<li>To develop an open source framework of a modular rover which works as 
 											baseline for future projects.
 									   </li>
 
-									   <li>To establish the antecedent of a fully autonomous moon rover capable of communicating with other rovers 
-										   conforming a constellation. 
-								   		</li>
 									</ul>
 
 								</div>
 								<div class="col-4 col-12-medium">
 									<ul  class="textoJustificado">
+										
+										<li>To establish the antecedent of a fully autonomous moon rover capable of communicating with other rovers 
+											conforming a constellation. 
+											</li>
 										<li>
 											To establish the antecedent of a low cost and open source rover capable 
 											of carrying  out its mission after the moon night.
 										</li>
 										<li>
-											Generate a database for future implementations using Deep Learning algorithms 
-											that will allow to predict moonquakes from the measurements made  by the rover.
+											Generate a database of images of the moon
+											 terrain and other measurements for boost future
+											  implementations of Deep Learning algorithms.
 										</li>
 									</ul>
 								</div>
@@ -160,18 +166,20 @@
 
 			<!-- Three -->
 				<section id="four" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/power.jpg" alt="" /></span>
+					<span class="image fit main bottom"><img src="images/potencia.jpg" alt="" /></span>
 					<div class="content">
 						<header>
 							<h2>Power </h2>
-							<p>Survive one full lunar day! </p>
+							<p>Survive one full lunar eclipse! </p>
 							<p>Thanks to the advancement of materials engineering, today we choose to have highly 
 								efficient solar panel modules with negligible weight, which guarantee us all the necessary
-								 energy to move our mechatronic system. Another decisive factor in our design is the batteries, 
+								 energy to move our mechatronic system. They are located in the side because our first mission
+								 will be in the poles were the solar incidence it is almost parallel.
+								  Another decisive factor in our design is the batteries, 
 								 a fundamental element that determines the success of our mission. We opted for centralized energy 
 								 storage.  It provides us with regulated voltage outputs for our control and power requirements,
 								  as well as enough energy density to keep our CPU in a controlled atmosphere while it performs data 
-								  logging during 336 hours of operation.</p>
+								  logging during 12 hours of operation.</p>
 						</header>
 					
 						<!-- <ul class="actions">
@@ -183,7 +191,7 @@
 
 
 				<section id="six" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/FeaturesTito2.png" alt="" /></span>
+					<span class="image fit main"><img src="images/slam.jpg" alt="" /></span>
 					<div class="content">
 						<header>
 							<h2>Navigation</h2>
@@ -203,7 +211,7 @@
 
 
 				<section id="seven" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/comms ingles.png" alt="" /></span>
+					<span class="image fit main bottom"><img src="images/comms.jpg" alt="" /></span>
 					<div class="content">
 						<header>
 							<h2>Communication </h2>
@@ -211,9 +219,9 @@
 						</header>
 						<p class="textoJustificado">The rover has three communication systems. The first is RS-422. It is used to check the
 							 "health status" of the rover before the mission begins. The second is IEEE 802.11n (WiFi 4)
-							  which is used to communicate with the lander in zone A (200 m) and download all the collected
+							  which is used to communicate with the lander and with other rovers with high speed (zone A - 500 m) and download all the collected
 							   information (geological and images). The third is LoRa, which lets the rovers communicate with each
-							    other within a 25 km radius (zone B) and transfer the collected information until the one closest to 
+							    other within a 32 km radius (zone B) and recive commands and also transfer the collected information until the one closest to 
 								the lander can download that information. That way, the analysis area can be expanded.</p>
 						<ul class="actions">
 							<!-- <li><a href="#" class="button">Learn More</a></li> -->
@@ -231,12 +239,14 @@
 							<p>How is our rover controlled?</p>
 						</header>
 						<p>
-							The brain of the rover is a microcontroller of the SAMV71 family , it will control different subsystems like power module, temperature control, communications and data processing.
-							To bring out the processing required for Visual SLAM, we count with a  SBC (Single Board Computer), where the SLAM navigation libraries will be running.
-							To achieve an easy implementation of the rover we pretend to use COTS (Commercial Of The Shelf) products, and open source libraries with the objective of reducing development and evaluation times and costs. Avoiding the use of rad-tolerant and rad-hardened components whenever possible, except for those developing a critical mission like the memories and the microcontroller.
-							To achieve a good reliability the rover will have redundant components that start working when a critical component fails.
-							We attempt to make a versatile product, adaptable to different missions with the least effort, and large scale manufacturable.
-							
+							The brain of the rover is a microcontroller of the SAMV71 family, it will control different subsystems. 
+							To bring out the processing required for Visual SLAM, we count with a SBC (Single Board Computer), where
+							 the SLAM navigation libraries will be running. To achieve an easy implementation of the rover we pretend 
+							 to use COTS (Commercial Of The Shelf) products, and open source libraries with the objective of reducing 
+							 development and evaluation times and costs. Avoiding the use of rad-tolerant and rad-hardened components
+							  whenever possible, except for those developing a critical mission.
+							   To achieve a good reliability the rover will have redundant components that start working when a 
+							   component fails. 
 
 							
 							</p>
